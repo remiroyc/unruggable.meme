@@ -1,6 +1,7 @@
 {
   "name": "unruggable-sdk",
   "version": "1.0.0",
+  "description": "A JavaScript SDK for interacting with the Unruggable protocol.",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -46,5 +47,14 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "vitest": "^1.5.0"
-  }
+  },
+  "keywords": [
+    "unruggable",
+    "sdk",
+    "javascript",
+    "starknet",
+    "blockchain"
+  ],
+  "author": "ScreenshotLabs",
+  "homepage": "https://github.com/your-username/unruggable-sdk"
 }
