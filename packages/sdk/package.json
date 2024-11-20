@@ -1,6 +1,6 @@
 {
   "name": "unruggable-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A JavaScript SDK for interacting with the Unruggable protocol.",
   "license": "MIT",
   "main": "dist/index.js",
