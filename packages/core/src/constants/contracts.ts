@@ -33,6 +33,11 @@ export const USDC_ADDRESSES = {
   [constants.StarknetChainId.SN_MAIN]: '0x53c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8',
 }
 
+export const LORDS_ADDRESSES = {
+  [constants.StarknetChainId.SN_SEPOLIA]: '0x0124aeb495b947201f5fac96fd1138e326ad86195b98df6dec9009158a533b49',
+  [constants.StarknetChainId.SN_MAIN]: '0x0124aeb495b947201f5fac96fd1138e326ad86195b98df6dec9009158a533b49',
+}
+
 export const MULTICALL_ADDRESSES = {
   [constants.StarknetChainId.SN_SEPOLIA]: '0x04d0390b777b424e43839cd1e744799f3de6c176c7e32c1812a41dbd9c19db6a',
   [constants.StarknetChainId.SN_MAIN]: '0x01a33330996310a1e3fa1df5b16c1e07f0491fdd20c441126e02613b948f0225',

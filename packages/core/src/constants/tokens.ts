@@ -1,12 +1,20 @@
 import { constants, getChecksumAddress } from 'starknet'
 
 import { MultichainToken, Token } from '../types/tokens'
-import { ETH_ADDRESSES, JEDISWAP_ETH_USDC, JEDISWAP_STRK_USDC, STRK_ADDRESSES, USDC_ADDRESSES } from './contracts'
+import {
+  ETH_ADDRESSES,
+  JEDISWAP_ETH_USDC,
+  JEDISWAP_STRK_USDC,
+  STRK_ADDRESSES,
+  USDC_ADDRESSES,
+  LORDS_ADDRESSES,
+} from './contracts'
 
 export enum QUOTE_TOKEN_SYMBOL {
   ETH = 'ETH',
   STRK = 'STRK',
   USDC = 'USDC',
+  LORDS = 'LORDS',
 }
 
 // ETH
@@ -79,6 +87,24 @@ export const USDCoin: MultichainToken = {
   },
 }
 
+// LORDS
+export const LordsCoin: MultichainToken = {
+  [constants.StarknetChainId.SN_SEPOLIA]: {
+    address: USDC_ADDRESSES[constants.StarknetChainId.SN_SEPOLIA],
+    symbol: QUOTE_TOKEN_SYMBOL.LORDS,
+    name: 'USD Coin',
+    decimals: 18,
+    camelCased: true,
+  },
+  [constants.StarknetChainId.SN_MAIN]: {
+    address: USDC_ADDRESSES[constants.StarknetChainId.SN_MAIN],
+    symbol: QUOTE_TOKEN_SYMBOL.LORDS,
+    name: 'LORDS',
+    decimals: 18,
+    camelCased: true,
+  },
+}
+
 // Quote tokens
 
 export const QUOTE_TOKENS: { [chainId in constants.StarknetChainId]: Record<string, Token> } = {
@@ -97,6 +123,8 @@ export const QUOTE_TOKENS: { [chainId in constants.StarknetChainId]: Record<stri
     [getChecksumAddress(ETH_ADDRESSES[constants.StarknetChainId.SN_MAIN])]: Ether[constants.StarknetChainId.SN_MAIN],
     [getChecksumAddress(STRK_ADDRESSES[constants.StarknetChainId.SN_MAIN])]: Stark[constants.StarknetChainId.SN_MAIN],
     [getChecksumAddress(USDC_ADDRESSES[constants.StarknetChainId.SN_MAIN])]: USDCoin[constants.StarknetChainId.SN_MAIN],
+    [getChecksumAddress(LORDS_ADDRESSES[constants.StarknetChainId.SN_MAIN])]:
+      LordsCoin[constants.StarknetChainId.SN_MAIN],
   },
 }
 
